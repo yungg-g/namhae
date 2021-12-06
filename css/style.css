@@ -1,0 +1,298 @@
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none; display: block;}
+@font-face { font-family: 'OSeongandHanEum'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OSeongandHanEum.woff') format('woff'); font-weight: normal; font-style: normal; }
+body{font-family: 'Do Hyeon', 'Nanum Gothic'; position: relative;}
+
+#wrap{margin: 0 auto;}
+.center{margin: 0 auto;}
+
+/*header : 픽스, 로고 중앙정렬 및 lnb/mlnb 꾸미기*/
+#wrap>#header{width: 100%; height: 50px; background: #fff; position: fixed; z-index: 999;}
+#wrap>#header>.center>.logo{position: absolute; margin-left: 50%; transform: translateX(-50%);}
+#wrap>#header>.center>.logo>a>img{width: auto; height: 30px; margin: 5px 2.7% 0 0; float: left;}
+#wrap>#header>.center>.lnb{width: 75%; float: right; padding-top: 10px; display: none;}
+#wrap>#header>.center>.lnb>ul>li{width: 20%; float: left;}
+#wrap>#header>.center>.lnb>ul>li>a{width: 100%; height: 70px;  float: left; text-align: center; line-height: 70px; color: #000; letter-spacing: 5%; font-size: 30px; position: relative;}
+#wrap>#header>.center>.lnb>ul>li>a::after{content: ' '; position: absolute; left: 0; bottom: 0; width: 0; height: 3px; background: #DB0000; transition: width 0.3s;}
+#wrap>#header>.center>.lnb>ul>li>a:hover::after{width: 100%;transition: width 0.3s;}
+#wrap>#header>.center>.lnb>ul>li>a:hover{color: #DB0000;}
+#wrap>#header>.center>.mLnb>a{height: 80px; width: 50px; float: right; cursor: pointer;}
+#wrap>#header>.center>.mLnb>a>.mlnbBtn{height: 5px; position: absolute; top: 50%; transform: translateY(-50%); right: 5%;}
+#wrap>#header>.center>.mLnb>div{background: rgba(255, 255, 255, 0.7); width: 100%; position: fixed; top: 0; right: -100%; z-index: 999; transition: right 0.5s ease-out;}
+#wrap>#header>.center>.mLnb>div>input[type="button"]{float: right; width: 50px; height: 40px; color: #000; background: #fff; border: 1px solid #ffcc00; margin: 10px 3.5% 10px 0; font-weight: bold;}
+#wrap>#header>.center>.mLnb>div>ul{clear: both;}#wrap>#header>.center>.mLnb>div>ul>li{height: 40px;}
+#wrap>#header>.center>.mLnb>div>ul>li>a{font-size: 25px; color: #000; text-align: center; height: 100%; line-height: 40px;}#wrap>#header>.center>.mLnb>div>ul>li>a:hover{background: #000; color: #ffcc00;}
+#wrap>#header>.center>.mLnb>div>ul>li>a:active{background: #fff; color: #DB0000;}
+
+/*슬라이드/뉴스창*/
+#wrap>#slidenews{width: 100%; height: 400px; position: relative; padding-top: 50px;}
+#wrap>#slidenews>.slide{width: 100%; height: 570px;}
+#wrap>#slidenews>.slide img{margin: 0 auto; width: 100%;}
+
+#wrap>#slidenews>section>.center{position: relative;}
+
+#wrap .center>.news{position: absolute; top: -100px; width: 100%; left: 50%; transform: translateX(-50%); z-index: 997;}
+#wrap .center>.news>section{width: 33.333%; height: 120px; background: #fff; float: left; border: 1px solid #Ffb448; box-sizing: border-box; padding: 20px 5px; }
+#wrap .center>.news>.weather{ letter-spacing: 2px; background: url('../img/weather.jpg'); background-size: 100% 200px; background-repeat: no-repeat; background-position: center center; color: #fff;  border: unset;}
+#wrap .center>.news>.weather>img{width: 35.633%; height: auto; float: left; margin-bottom: 10px;}
+#wrap .center>.news>.weather>h4{font-size: 10px; padding-top: 0px; float: right; text-align: right;}
+#wrap .center>.news>.weather>h3{font-size: 31px; padding-bottom: 10px; float: right;}
+#wrap .center>.news>.weather>p{font-size: 10px;clear: both; text-align: center; padding-top: 10px; border-top: 1px solid #fff; word-break: keep-all;}
+
+#wrap .center>.news>.news1{box-sizing: border-box;}
+#wrap .center>.news>.news1>h6{font-size: 15px; color: #DB0000;}
+#wrap .center>.news>.news1>h6:last-child{float: right; font-style: italic;}
+#wrap .center>.news>.news1>h3{font-size: 15px;}
+#wrap .center>.news>.news1>p{width : 100%; height:30px; overflow: hidden;}
+#wrap .center>.news>.news1>p>a{font-size: 13px; color: #000; overflow: hidden; margin-bottom: 5px; font-family:'Nanum Gothic';}
+#wrap .center>.news>.news1>p>a{display: -webkit-box; white-space: normal; line-height: 1.2; height: 2.4em; word-wrap: break-word; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
+
+/*내용중 공통 부분*/
+#wrap>section{clear: both;}
+.title{width: 100%; height: 60px; vertical-align: middle; padding-top: 30px; box-sizing: border-box;}
+.title>img{width: auto; height: 25px; float: left; margin-left: 2%;}
+.title>p{font-size: 25px; float: left;}
+.main{position: relative;}
+.main>.center{padding-top: 170px;}
+.main>.mainImg{width: 100%; height: 190px; background-position: center; position: absolute;z-index: -1;}
+.main>.mainImg>.center>.mainText{font-size: 25px; font-family: 'OSeongandHanEum'; line-height: 30px; top: 50%; transform: translateY(-50%); position: absolute; color: #fff;text-shadow: 0 0 5px gray;}
+.main>.mainImg>.center>.subText{font-size: 13px; font-family: 'OSeongandHanEum'; line-height: 20px; bottom: 20px; position: absolute; color: #fff;text-shadow: 0 0 5px gray;}
+.inTxt{width: 100%; background: #fff; border: 1px solid #DB0000; padding: 20px 0; box-sizing: border-box; top: 440px; margin-bottom: 30px;}
+.textCenter{text-align: center;}
+.textCenter>h5{color: #DB0000; font-size: 23px;}
+.textCenter>h2{font-size: 20px; word-break: keep-all;}
+.textCenter>p{font-size: 18px; font-family: 'OSeongandHanEum'; width: 65%; margin: 0 auto;}
+.centerInner>img{width: 100%; height: auto; padding: 10px 0;}
+.inTxt>img{width: 100%; height: 190px; padding: 20px 0;}
+.centerInner{width: 85%; margin: 0 auto; text-align: left; padding-top: 30px;}
+.centerInner>h4{font-size: 20px; color: #DB0000;}
+.centerInner>h2{font-size: 25px;}
+.centerInner>h5{font-size: 15px; font-family: 'Nanum Gothic'; line-height: 23px; font-weight: normal;}
+.centerSuperInner{width: 78%; margin: 0 auto; text-align: left;}
+.centerSuperInner>h5{color: #DB0000; font-size: 20px;}
+.centerSuperInner>p{font-size: 15px; font-family: 'Nanum Gothic'; line-height: 20px;}
+.centerInner2{width: 79.63%; height: 420px; margin: 0 auto; text-align: left; padding-top: 50px;}
+.centerInner2>h2{font-size: 20px;}
+.centerInner2>div{width: 100%; height: 160px; background-position: center; position: relative;z-index: 1; margin-bottom: 10px;}
+.centerInner2>div:first-of-type{float: left;}
+.centerInner2>div:first-of-type:after{background-image: url('../img/food1.png'); background-size: cover; position: absolute; background-position: center; top: 0; width: 100%; height: 100%;z-index: -1; content:"";}
+
+.centerInner2>div:last-of-type{float: right;}
+.centerInner2>div:last-of-type:after{background-image: url('../img/food2.png'); background-size: cover; position: absolute; background-position: center; top: 0; width: 100%; height: 100%;z-index: -1; content:"";}
+.centerInner2>div>h6{font-size: 15px; padding: 30px 10% 0; font-family: 'OSeongandHanEum'; color: #fff; text-shadow: 0 0 5px black;}
+.centerInner2>div>h3{font-size: 30px; padding: 20px 10% 0; color: #FFB448; text-shadow: 0 0 5px black;}
+.centerInner2>div>h4{font-size: 15px; padding: 0 10% 30px; color: #fff;  text-shadow: 0 0 5px black;}
+
+/*여행추천*/
+#susume>.main>.mainImg{background-image: url('../img/tripmain.jpg'); background-size: cover;}
+#susume>.main>.mainImg>.center>.mainText{color: #000; text-shadow: unset;}
+
+/*맥주축제*/
+#beer{width: 100%; height: 320px; margin-bottom: 50px; background: #FFF8EF;}
+#beer>.bPhoto>div{float: left; height: 190px; background-size: cover; background-position: center center;}
+#beer>.bPhoto>div>.bTxt{width:100%; height:100%; position: relative; padding: 10px 15px; box-sizing: border-box;}
+#beer>.bPhoto>div>.bTxt>h5{color: #fff; font-size: 15px; text-shadow: 0 0 5px black;}
+#beer>.bPhoto>div>.bTxt>h4{position: absolute; font-size: 23px; color: #DB0000; bottom: 30px;text-shadow: 0 0 5px black;}
+#beer>.bPhoto>div>.bTxt>h3{position: absolute; font-size: 30px; color: #fff; bottom: 0px;text-shadow: 0 0 5px black;}
+#beer>.bPhoto>div:first-of-type{width: 100%; margin-right: 2%; background-image: url('../img/beerphoto3.jpg');}
+#beer>.bPhoto>div:nth-of-type(2){width: 43%; background-image: url('../img/beerphoto1.png');}
+#beer>.bPhoto>div:nth-of-type(3){width: 23%; margin: 25px 0 0; background-image: url('../img/beerphoto2.jpg');}
+#beer>.bPhoto>div:nth-of-type(5){width: 23%; margin: 25px 0 0; background-image: url('../img/beerphoto6.jpg');}
+#beer>.bPhoto>div:nth-of-type(4){width: 50%; margin: 25px 2% 0; background-image: url('../img/beerphoto5.jpg');}
+#beer>.bPhoto>div:nth-of-type(n+2){display: none;}
+
+/*먹거리*/
+#food{height: 1750px;}
+#food>.main>.mainImg{background-image: url('../img/foodmain1.jpg'); background-size: cover;}#food .search{width: 90%; height: 45px; margin: 0 auto;border: 1px solid #DB0000; box-sizing: border-box;}#food .search>select{width: 25%; height: 100%; border-right: 1px solid #DB0000; border-radius: 0px; box-sizing: border-box; float: left; font-family: 'Do Hyeon'; font-size: 20px; background: url('../img/select.png') no-repeat 95% 50%; background-size: 20%; -webkit-appearance: none;}#food .search>input[type="search"]{width: 60%; height: 100%; float: left; font-family: 'Do Hyeon'; font-size: 20px; -webkit-appearance: none; border-radius: 0px; border: 0px;}
+#food button#search_btn{background: #DB0000; border: 0; width: 15%; height: 100%;}
+#food button#search_btn>img{margin-right: 7%; width: 25px;}
+
+#food>.center>.foodi{width:100%; height: 250px; margin-bottom: 10px; position: relative; background-size: cover; float: left; background-position: center;}
+#food>.center>.foodi:nth-of-type(1){background-image: url('../img/food-1.png');}
+#food>.center>.foodi:nth-of-type(2){background-image: url('../img/food4.png');}
+#food>.center>.foodi:nth-of-type(3){background-image: url('../img/food-2.png');}
+#food>.center>.foodi:nth-of-type(4){background-image: url('../img/food3.png'); }
+#food>.center>.foodi:nth-of-type(5){background-image: url('../img/food5.png');}
+#food>.center>.foodi:hover>div{opacity: 1;}
+#food>.center>.foodi>div{width: 100%; height: 110px; background: rgba(255, 255, 255, 0.7); position: absolute; bottom: 0; padding: 18px 17px; box-sizing: border-box; opacity: 0; transition: opacity 0.5s;}
+#food>.center>.foodi>div>.right{word-break: keep-all; float: right; text-align: right;}
+#food>.center>.foodi>div>.left{float: left;}
+#food>.center>.foodi>div h4{font-size: 22px; color: #DB0000;}
+#food>.center>.foodi>div h2{font-size: 32px; color: #000;}
+#food>.center>.foodi>div h3{font-size: 22px; color: #000;}
+
+/*펜션정보*/
+#cottage{height: 1000px;}
+#cottage>.main>.mainImg{background-image: url('../img/cottage.jpg'); background-size: cover;}
+#cottage>.main>.center>.inTxt{border: 1px solid #000;}
+#cottage>.center>.cottageBox{height: 700px; position: relative;}
+#cottage>.center>.cottageBox>img{width: 100%; float: left; border: 1px solid #000;}
+#cottage>.center>.cottageBox>ul{width: 95%;float: left; padding-top: 10px; margin-left: 2.5%;}
+#cottage>.center>.cottageBox>ul>li{width: 25%; font-size: 15px; line-height: 20px; float: left; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+#cottage>.center>.cottageBox>ul>li.inactive{color:gray;}
+#cottage>.center>.cottageBox>ul>li>div{width: 20px; height: 20px; border-radius: 50%; background: #000; color: #fff; float: left; text-align: center; margin: 0 2% 5px 0;}
+#cottage>.center>.cottageBox>ul>li.inactive>div{background: gray;}
+#cottage>.center>.cottageBox>ul>li>span{float: right; margin-right: 5%;}
+#cottage>.center>.cottageBox>ul>li:not(.inactive):hover{color: #DB0000;}
+#cottage>.center>.cottageBox>ul>li:not(.inactive):hover>div{background: #DB0000;}
+#cottage>.center>.cottageBox>ul>.lightbox{position: fixed; top:50%; left: 50%; transform: translate(-50%, -50%); width: 75%; height: 325px; background: #fff; border-radius: 20px; box-shadow: 0 0 5px gray; overflow: hidden; text-align: center; display: none; z-index: 99;}
+#cottage>.center>.cottageBox>ul>.lightbox>a{width: 100%; height: 65%; display: block;}
+#cottage>.center>.cottageBox>ul>.lightbox>a>img{height: 100%; width: 100%;}
+#cottage>.center>.cottageBox>ul>.lightbox>h3{font-size: 25px; padding-top: 20px;}
+#cottage>.center>.cottageBox>ul>.lightbox>p{font-size: 20px; padding-top: 17px; cursor: pointer;}
+
+/*주변여행지*/
+#around{height: 1000px;}
+#around>.main>.mainImg{background-image: url('../img/aroundMain.jpg'); background-size: cover; background-position: bottom;}
+#around>.main>.center>.inTxt{border: 1px solid #FFB448;}
+#around>.center>.aSection{width: 100%;}
+#around>.center>.aSection>.aroundBox{width: 31%; height: 180px; background: #fff; text-align: center; box-shadow: 0 0 5px lightgrey; margin: 0 2.3% 10px 0; overflow: hidden;}
+#around>.center>.aSection>.aroundBox>a{display: block; height: 100%; width: 100%; position: relative;}
+#around>.center>.aSection>.aroundBox>a>img{width: 100%; height: 100px; margin-bottom: 10px;}
+#around>.center>.aSection>.aroundBox>a>img:last-of-type{width: auto; height: 20px; position: absolute; right: 10px; bottom: 80px; filter: drop-shadow(0 0 3px rgb(80, 80, 80));}
+#around>.center>.aSection>.aroundBox h3{font-size: 15px; color: #FFB448;}
+#around>.center>.aSection>.aroundBox p{font-size: 10px; color: #000; margin: 0 5%; word-break: keep-all;}
+#around>.center>.aSection>.special{height: 140px;}
+
+#around>.center>.aSection>.special>a>img{height: 70px; margin-bottom: 0;}
+#around>.center>.aSection>.special>a>img:last-of-type{ bottom: 80px;}
+
+/*푸터*/
+#footer{text-align: center; background: #000; color: #fff; clear: both; padding-top: 30px; box-sizing: border-box;}
+#footer>address{font-size: 28px; font-style: normal; margin-bottom: 20px;}
+#footer>address>p{font-size: 18px;}
+#footer>div{width: 50%; height: 40px; background: #fff; margin-left: 50%; transform: translateX(-50%);}
+#footer>div>a{color: #000;line-height: 40px; font-size: 20px; display: block; width: 100%; height: 100%;}
+#footer>img{width: 80%;}
+
+/*반응형 만들기
+/*모바일*/
+@media screen and (min-width:260px){
+    #wrap, #header, #footer{max-width: 460px; min-width: 360px;}
+    .center{width: 97%;}
+    #wrap>#header>.center{width: 100%;}
+    #wrap>#header>.center>.mLnb>ul{width: 130%;}
+    #wrap>#header>.center>.mLnb>ul a{line-height: 40px;}
+    #wrap>#slidenews>.slide{height: 230px;}
+    
+    #wrap .center>.news{top: -30px;}
+    #wrap .center>.news>.weather>img{width: 30%;}
+    #wrap .center>.news>.weather>h3{font-size: 25px;}
+    #food>.center>.foodi{width: 100%;}
+    #food>.center>.foodi>div{opacity: 1;}
+    
+
+}
+
+/*태블릿*/
+@media screen and (min-width:550px){
+    #wrap, #header, #footer{max-width: 768px; min-width: 600px;}
+    .center{width: 93%;}
+    #wrap>#slidenews>.slide{height: auto;}
+    #wrap>#slidenews{height: 600px; padding-top: 0;}
+    #wrap .center>.news>section{height: 160px; padding: 30px 20px;}
+    #wrap .center>.news>.weather>p{font-size: 17px;}
+    #wrap .center>.news>.news1>h3{font-size: 23px;}
+    .title{height: 80px;}.title>p{font-size: 35px;}.title>img{height: 35px;}
+    .main>.mainImg{height: 340px;}
+    .main>.center{padding-top: 315px;}
+    .main>.mainImg>.center>.mainText{font-size: 35px; line-height: 50px;}
+    .inTxt>img{height: 340px;}
+    .textCenter>h2{font-size: 25px;}
+    .centerInner2{width: 100%; height: 300px;}.centerInner2>div{width: 49%;}
+    .main>.mainImg>.center>.subText{bottom: 60px; font-size: 20px; line-height: 25px;}
+    #beer{height: 420px;}
+    #beer>.bPhoto>div{height: 300px;}
+    #cottage{height: 1200px;}
+    #cottage>.center>.cottageBox{height: 960px;}
+    #cottage>.center>.cottageBox>ul>.lightbox{width: 40%;}
+    #around{height: 1500px;}
+    
+    #around>.center>.aSection>.aroundBox{ height: 280px; margin: 0 2.3% 16.422px 0;}
+    #around>.center>.aSection>.aroundBox h3{font-size: 20px;}
+    #around>.center>.aSection>.aroundBox p{font-size: 17px;}
+    #around>.center>.aSection>.aroundBox>a>img{height: 170px;}
+    #around>.center>.aSection>.aroundBox>a>img:last-of-type{bottom: 110px;}
+    #around>.center>.aSection>.special{height: 220px;}
+    #around>.center>.aSection>.special>a>img{height:120px;}
+    #around>.center>.aSection>.special>a>img:last-of-type{bottom: 110px;}
+
+    #footer>div{width: 30%;}
+    
+}
+/*PC*/
+@media screen and (min-width:960px){
+    #wrap, #header, #footer{min-width: 100%;max-width: 100%;}
+    .center{max-width: 1080px; min-width: 940px; margin: 0 auto;}
+    #wrap>#header{height: 80px;}
+    #wrap>#header>.center>.logo>a>img{height: 60px;}
+    #wrap>#slidenews{padding-top: 80px;}
+    #wrap>#header>.center>.logo{position: unset; margin-left: 0; transform: translateX(0);}
+    #wrap>#header>.center>.lnb{display: block;}
+    #wrap>#header>.center>.mLnb{display: none;}
+    #wrap>#slidenews{height: 860px;}
+    #wrap>#slidenews>.slide{height: 540px; max-width: 1600px; margin-left: 50%; transform: translateX(-50%);}
+    #wrap .center>.news{width: 100%; top: -100px;}
+    #wrap .center>.news>section{height: 230px;}
+    #wrap .center>.news>.weather{padding: 40px 5%; background-size: 100% 230px;}
+    #wrap .center>.news>.weather>img{width: 35.633%;}
+    #wrap .center>.news>.weather>h4{font-size: 20px; padding-top: 0px; float: right; text-align: right;width: 55%;}#wrap .center>.news>.weather>h3{font-size: 31px;}
+    #wrap .center>.news>.weather>p{font-size: 27px;}
+    #wrap .center>.news>.news1{padding: 40px 5%; background-size: 100% 230px;}
+    #wrap .center>.news>.news1>p{height: 60px;}
+    #wrap .center>.news>.news1>h6, #wrap .center>.news>.news1>h3{font-size: 25px; margin-bottom: 5px;}
+    
+    #wrap .center>.news>.news1>p>a{height:3.6em; -webkit-line-clamp: 3; font-size: 15px;}
+    .main>.center{padding-top: 390px;}
+    .main>.mainImg{height: 500px;}
+    .main>.mainImg>.center>.mainText{ font-size: 45px; line-height: 70px;}.main>.mainImg>.center>.subText{font-size: 20px; line-height: 32px; bottom: 120px;}
+    .inTxt{padding: 70px 0;}
+    .textCenter>h2{margin-bottom: 5px; font-size: 35px;}
+    .textCenter>h5{margin-bottom: 10px;}
+    .centerInner{padding-top: 95px; width: 79.63%;}
+    .centerInner>h4{margin-bottom: 5px;}.centerInner>h2, .centerInner2>h2{margin-bottom: 15px;}
+    .centerSuperInner{width: 74.074%;}
+    .centerSuperInner>p{margin: 10px 0 20px; line-height: 25px;}
+    .inTxt>img{height: 453px;}
+    .centerInner2{height: 500px;}
+    .centerInner2>div{width: 49%; height: 300px;}
+    .centerInner2>div>h6{font-size: 25px;}.centerInner2>div>h3{font-size: 50px; padding: 60px 10% 0;}.centerInner2>div>h4{font-size: 35px;}
+    
+    
+    #food{height: 1400px;}
+    #food .search{height: 60px;}
+    #food .search>select{width: 20%; font-size: 35px;}
+    #food button#search_btn{width: 10%;}
+    #food .search>input[type="search"]{width: 70%; font-size: 35px;}
+    #food button#search_btn>img{vertical-align: unset;}
+    #food>.center>.foodi>div{opacity: 0;}
+    #food>.center>.foodi{margin-bottom: 23px;}
+    #food>.center>.foodi>div h2{font-size: 25px;}
+    #food>.center>.foodi>div h3{font-size: 18px;}
+    #beer{height: 850px;}
+    #beer>.bPhoto>div:nth-of-type(n+2){display: block;}
+    #beer>.bPhoto>div:first-of-type{width: 54%;}
+    #cottage{height: 1500px;}
+    #cottage>.center>.cottageBox>img{width: 70%;}#cottage>.center>.cottageBox>ul{width: 27%;}#cottage>.center>.cottageBox>ul>li{width: 50%; font-size: 20px; line-height: 30px;}#cottage>.center>.cottageBox>ul>li>div{width: 25px; height: 25px;}
+    #cottage>.center>.cottageBox{height: 730px;}
+    #cottage>.center>.cottageBox>ul>.lightbox{width: 30%; height: 480px;}
+    #around{height: 2250px;}
+    #around>.center>.aSection>.aroundBox{height: 440px; margin: 0 2.3% 24.828px 0;}#around>.center>.aSection>.special{height: 360px;}
+    #around>.center>.aSection>.aroundBox>a>img{height: 265px; margin-bottom: 35px;}
+    #around>.center>.aSection>.aroundBox h3{font-size: 30px; margin-bottom: 10px;}
+    #around>.center>.aSection>.aroundBox p{font-size: 20px;}
+    #around>.center>.aSection>.aroundBox>a>img:last-of-type{height: 30px; bottom: 160px; right: 20px;}
+    #around>.center>.aSection>.special>a>img{height: 210px; margin-bottom: 15px;} #around>.center>.aSection>.special>a>img:last-of-type{height: 30px; bottom: 150px; right: 20px;}
+
+    #food>.center>.foodi:nth-of-type(1){width:51.111%;  margin-right: 2.315%;}
+    #food>.center>.foodi:nth-of-type(2){width:46.574%;}
+    #food>.center>.foodi:nth-of-type(3){width:31.389%; margin-right: 2.315%;}
+    #food>.center>.foodi:nth-of-type(4){width:32.593%; margin-right: 2.315%;}
+    #food>.center>.foodi:nth-of-type(5){width:31.389%;}
+
+    #footer{height: 260px;}
+    #footer>div{width: 20%; margin-bottom: 20px;}
+    #footer>img{width: 515px;}
+
+}

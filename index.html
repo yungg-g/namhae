@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>독일마을</title>
+    <!--파비콘-->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <!--웹폰트-->
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Nanum+Gothic&display=swap&subset=korean" rel="stylesheet">
+    <!--큰레이아웃css-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--세부요소 css-->
+    <link rel="stylesheet" href="css/swiper.min.css"><!--slider--> 
+    <!--js엔진-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--동적js-->
+    <script src="js/start.js"></script>
+    <!-- 슬라이드 styles -->
+    <style>
+        .swiper-container {
+        width: 100%;
+        height: 100%;
+        }
+        .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        }
+    </style>    
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="center">
+                <h1 class="logo"><a class="goTop"><img src="img/logo.jpg" alt="logo"></a></h1>
+                <nav class="lnb">
+                    <ul>
+                        <li><a href="#susume">여행코스추천</a></li>
+                        <li><a href="#beer">맥주축제</a></li>
+                        <li><a href="#food">먹거리</a></li>
+                        <li><a href="#cottage">펜션정보</a></li>
+                        <li><a href="#around">주변여행지</a></li>
+                    </ul>
+                </nav>                
+                <nav class="mLnb"> 
+                    <a><img class="mlnbBtn" src="img/mLnbBtn.png" alt="모바일메뉴버튼"></a>
+                    <div>
+                        <input type="button" value="X" class="m_close">
+                        <ul>
+                            <li><a href="#susume">여행코스추천</a></li>
+                            <li><a href="#beer">맥주축제</a></li>
+                            <li><a href="#food">먹거리</a></li>
+                            <li><a href="#cottage">펜션정보</a></li>
+                            <li><a href="#around">주변여행지</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <section id="slidenews"><!--슬라이드/날씨+뉴스-->
+            <section class="slide"><!--슬라이드-->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide"><img src="img/slide1.jpg" alt="슬라이드1"></div>
+                      <div class="swiper-slide"><img src="img/slide2.png" alt="슬라이드2"></div>
+                      <div class="swiper-slide"><img src="img/slide3.png" alt="슬라이드3"></div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                  </div>
+                
+                  <!-- Swiper JS -->
+                  <script src="js/swiper.min.js"></script>
+                
+                  <!-- Initialize Swiper -->
+                  <script>
+                    var swiper = new Swiper('.swiper-container', {
+
+                      centeredSlides: true,
+                      loop: true,
+                      autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: false,
+                      },
+                      pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                      },
+                      navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                      },
+                    });
+                </script>
+            </section>            
+            <section><!--날씨/뉴스-->
+                <div class="center">
+                    <section class="news">
+                        <section class="weather">
+                            <img src="img/sun-w.png" alt="맑음">
+                            <h4 id="today"></h4>
+                            <h3>26.8℃</h3>
+                            <p>습도40%, 강수20%</p>
+                        </section>
+                        <section class="news1">
+                            <h6># EVENT</h6>
+                            <h3>제9회 맥주 축제</h3>
+                            <p><a href="#">2019. 10. 3.(목) ~ 10. 5.(토)<br> 
+                                장 소 : 독일마을 일원(독일광장)<br>
+                                내용 : 오픈환영퍼레이드, 퍼포먼스 환영식 공주님입장</a></p>
+                            <h6>read more+</h6>
+                        </section>
+                        <section class="news1">
+                            <h6># HISTORY</h6>
+                            <h3>남해파독전시관</h3>
+                            <p><a href="#">1960년대 어려운 시기에 조국근대화와 경제발전에 헌신한 독일거주 교포들의 정착생활을 하고 레이드, 퍼포먼스 환영식 </a></p>
+                            <h6>read more+</h6>
+                        </section>
+                    </section>
+                </div>
+            </section>
+        </section>
+
+        <!--여행추천코스-->
+        <section id="susume">
+            <div class="center">
+                <div class="title">                    
+                    <p>여행추천코스</p>
+                    <img src="img/corse.png" alt="여행추천코스">
+                </div>
+            </div>
+            <div class="main">
+                <div class="mainImg"><div class="center"><h2 class="mainText">독일마을에서 추천하는<br>1박 2일 여행 코스!</h2></div></div>
+                <div class="center">
+                    <div class="inTxt"><!--여행추천코스 내용시작-->
+                        <div class="textCenter">
+                            <h5>#추천</h5>
+                            <h2>1박 2일 남해 여행</h2>
+                            <p>국제시장의 실제모델이 살고 있는 곳, 남해 독일마을로 여행을 떠나보자!</p>
+                        </div>
+                        <div class="centerInner">
+                            <h4>#DAY1</h4><h2>독일마을 주변을 돌아보자</h2><h5>독일마을은 대한민국 경상남도 남해군 삼동면 물건리에 있는 마을이다. 1960년대 독일에 간호사와 광부로 파견되었던 독일거주 교포들이 대한민국에 재정착할 수 있도록 남해군에서 개발한 곳이다.</h5>
+                        </div>
+                        <img src="img/trip1.png" alt="독일마을전경">
+                        <div class="centerSuperInner">
+                            <h5>#독일마을</h5>
+                            <p>독일아리랑 1960년대 초, 파독광부 간호사들이 송금해온 소중한 외화는 현재 세계 10대 경제대국이 되는 대한민국 경제개발의 밑천이 되었다.<br>
+                                1960년대 어려운 시기에 조국근대화와 경제발전에 헌신한 독일거주 교포들의 정착생활 지원과 조국 의 따뜻한 정을 느낄 수 있는 삶의 터전을 마련해 주고 독일의 이국문화와 전통문화예술촌을 연계한 특색 있는 관광지 개발을 위하여 지난 2001년부터 천연기념물 제150호가 있는 남해군 삼동면 물건리 일원 30,000여 평의 부지에 남해군에서 30여억 원을 들여 기반을 조성하여 70여동을 지을 수 있는 택지를 분양하였다.<br>
+                                건축은 교포들이 직접 독일의 재료를 수입하여 전통 독일식주택을 신축하고 있는데 지금은 42동 정도 가 완공되어 독일 교포들이 생활하고 있으며 독일에 가 있는 동안은 관광객을 위한 민박을 운영하고 있기도 한다.</p><br>
+                            <h5>#파독전시관</h5>
+                            <p>남해파독전시관은 전국 지방자치단체 중에서 ‘파독’을 주제로 건립된 유일한 전시관으로 2014년 6월 28일 개관하였습니다.<br>
+                                지난 1960년대 우리나라는 1인당 국민소득이 76달러로 세계 최빈국이었으며 실업률이 30%에 달하는 실정이었습니다. <br>
+                                가난을 극복하기 위해 20kg 가방 하나 들고 이백만리 독일로 떠난 광부와 간호사들. 그들의 당시 삶의 흔적과 애환을 엿볼 수 있는 전시관입니다.</p><br>
+                            <h5>#원예예술촌</h5>
+                            <p>남해에서 만나는 작은 행복 내가 살고 싶은 집! 내가 가꾸고 싶은 정원을 이곳에... 스파정원(핀란드풍), 토피어리정원(뉴질랜드풍), 조각정원(스페인풍), 풍차정원(네덜란드풍), 풀꽃지붕 (프랑스풍), 채소정원(스위스풍) 등 저마다 아름답고 개성적인 21개소의 주택과 개인정원을 나라별 이미지와 테마를 살려 조성하였으며 원예인들이 실제 살면서 가꾸고 있다. 이 밖에 9개소 공공정원과 산책로, 전망덱, 식당, 기념품점, 온실, 영상실, 전시장, 옥외공연장 등을 갖추었다. -벚꽃길, 장미터널, Ladies Garden등 테마가 있는 관람코스!! -남해 특산물이 유자를 이용한 호두과자와 아이스크림을 맛보세요.</p>
+                        </div>
+                        <img src="img/trip4.png" alt="도이쳐임비스">
+                        <div class="centerSuperInner">
+                            <h5>#도이쳐임비스</h5>
+                            <p>독일마을 주민들이 운영하는 독일식 포장마차 독일마을 주민들이 모여 마을기업을 만들어서 함께 운영하는 곳으로, 국제시장의 철수와 영희의 모델이 되었던 파독 간호사들을 만날 수 있습니다. 독일식 맥주와 소세지를 맛보세요!</p><br>
+                        </div>
+                        <div class="centerInner">
+                            <h4>#DAY2</h4><h2>독일마을에서 즐기는 액티비티</h2>
+                            <img src="img/trip5.png" alt="액티비티">
+                        </div>
+                        <div class="centerSuperInner">
+                            <h5>#액티비티:보트학교</h5>
+                            <p>남해군요트학교는 2009년 3월 28일 천혜의 자연경관을 자랑하는 삼동면 물건항에 설립되어 대한요트협회 인증을 받은 전문 강사진이 크루저 1척, 딩기요트 39척을 이용해 안전하고 즐거운 세일링을 책임지고 있습니다. 보물섬 남해의 진짜 보물! 독일마을 아래 펼쳐진 웅장한 어부림과 아름다운 에메랄드 빛 바다 위에 두둥실 뜬 요트의 낭만을 즐겨보세요! 흰 천과 바람만 있으면 우리를 어디로든 데려다 주는 ‘세일링’요트 체험! 선실과 엔진을 갖춘 크루저(cruiser)에서 남해의 절경을 감상할 수 있습니다! 즐거운 남해여행의 백미 요트의 매력이 가족, 연인, 남녀노소 누구에게나 잊지 못할 추억을 선사할 것입니다.</p><br>
+                        </div>
+                    </div>
+                    <div class="centerInner2">
+                        <h2>#인근_추천_맛집</h2>
+                        <div>
+                            <h6>생방송오늘저녁 / 2TV생생정보</h6>
+                            <h3>#남해향촌</h3>
+                            <h4>매일 09:00 - 21:00<br>
+                                055-867-7791</h4>
+                        </div>
+                        <div>
+                            <h6>6시내고향 / 생활의달인</h6>
+                            <h3>#은성쌈밥</h3>
+                            <h4>평일 10:30 - 21:00<br>
+                                055-867-0012</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--맥주축제-->
+        <section id="beer">
+            <div class="center">
+                <div class="title">
+                    <p>맥주축제</p>
+                    <img src="img/aorwn.png" alt="맥주축제">
+                </div>
+            </div>
+            <div class="center bPhoto">
+                <div>
+                    <div class="bTxt">
+                        <h5>May 1, 2018</h5>
+                        <h4>#EVENT</h4>
+                        <h3>October Festival</h3>
+                    </div>
+                </div>
+                <div>
+                    <div class="bTxt"><h5>May 1, 2018</h5>
+                        <h4>#EVENT</h4>
+                        <h3>With.friends</h3></div>                    
+                </div>
+                <div>
+                    <div class="bTxt"><h5>May 1, 2018</h5>
+                        <h4>#FOOD</h4>
+                        <h3>Beer</h3></div>                    
+                </div>
+                <div>
+                    <div class="bTxt"><h5>May 1, 2018</h5>
+                        <h4>#EVENT</h4>
+                        <h3>October Festival</h3></div>                    
+                </div>
+                <div>
+                    <div class="bTxt"><h5>May 1, 2018</h5>
+                        <h4>#EVENT</h4>
+                        <h3>Sing</h3></div>                    
+                </div>
+            </div>
+        </section>
+        <!--먹거리-->
+        <section id="food">
+            <div class="center">
+                <div class="title">
+                    <p>먹거리</p>
+                    <img src="img/thtpwl.png" alt="먹거리">
+                </div>
+            </div>
+            <div class="main">
+                <div class="mainImg"><div class="center"><h2 class="mainText">남해 독일마을의<br>특별한 한 끼</h2><h4 class="subText">남해의 명물인 쌈밥·물회는 물론,<br>유럽 가정식과 아기자기 예쁜 커피숍 등 특별한 식사를 즐겨보세요</h4></div></div>
+                <div class="center">
+                    <div class="inTxt"><!--여행추천코스 내용시작-->
+                        <div class="textCenter">
+                            <h2>무엇을 찾고 계세요?</h2>
+                            <div class="search">
+                                <select name="choice">
+                                    <option value="식사">식사</option>
+                                    <option value="간식">간식</option>
+                                    <option value="카페">카페</option>
+                                </select>
+                                <input type="search" name="검색" placeholder="검색어를 입력하세요">
+                                <button id="search_btn" type="submit" title="검색" class="sch_smit"><img src="img/search.png" alt="검색icon"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="center">
+                <article class="foodi"><!--음식사진이 들어갈 상자-->
+                    <div><!--호버시 나타날 하얀상자-->
+                        <div class="left"><h4>#쌈밥</h4><!--내부의 글1--><h2>은성쌈밥</h2><!--내부의 글2--></div>
+                        <div class="right"><h3>경상남도 남해군 삼동면<br>동천리 1130-3<br>T.055-867-0012</h3></div>
+                    </div>
+                </article>
+                <article class="foodi">
+                    <div>
+                        <div class="left"><h4>#유럽가정식</h4><h2>당케슈니첼</h2></div>
+                        <div class="right"><h3>경상남도 남해군 삼동면<br>독일로 61-27<br>T.070-4122-1838</h3></div>
+                    </div>
+                </article>
+                <article class="foodi">
+                    <div>
+                        <div class="left"><h4>#슈바인학센</h4><h2>바이로이트</h2></div>
+                        <div class="right"><h3>경상남도 남해군 삼동면<br>물건리 1154<br>T.055-867-3326</h3></div>
+                    </div>
+                </article>
+                <article class="foodi">
+                    <div>
+                        <div class="left"><h4>#피자</h4><h2>모스트피자</h2></div>
+                        <div class="right"><h3>경상남도 남해군 삼동면<br>봉화리 1131-1<br>T.010-9669-9969</h3></div>
+                    </div>
+                </article>
+                <article class="foodi">
+                    <div><div class="left"><h4>#카페&펍</h4><h2>크란츠러</h2></div>
+                        <div class="right"><h3>경상남도 남해군 삼동면<br>물건리 66-2<br>T.055-867-8382</h3></div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section id="cottage"><!--펜션정보-->
+            <div class="center">
+                <div class="title">
+                    <p>펜션정보</p>
+                    <img src="img/vpstus.png" alt="펜션정보 아이콘">
+                </div>
+            </div>
+            <div class="main">
+                <div class="mainImg"><div class="center"><h2 class="mainText">지금까지 이런 펜션은 없었다!<br>여기는 한국인가, 독일인가?!</h2><h4 class="subText">한국에서 즐기는 유럽식 숙박<br>아래 지도에서 확인해보세요!</h4></div></div>
+                <div class="center">
+                    <div class="inTxt">
+                        <div class="textCenter">
+                            <h2>펜션지도 목록에서 클릭하시면<br>각 펜션사이트로 접속하실 수 있습니다</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="center">
+                <div class="cottageBox">
+                    <img src="img/map.png" alt="펜션지도이미지">
+                    <ul><li>
+                        <div>1</div>모르겐슈테른
+                    </li>
+                    <div class="lightbox">
+                        <a href="http://xn--q20b22d63gstp7hax35e.kr/" target="_blank"><img src="img/cottage/p2.jpg" alt="모르겐슈테른"></a>
+                        <h3>모르겐슈테른<br>T.010-9165-4535</h3>
+                        <p class="closer">닫기</p>
+                    </div>
+                    <li class="inactive">
+                        <div>2</div>하우스비스바덴
+                    </li>
+                    <li>
+                        <div>3</div>하이디하우스
+                    </li>
+                    <div class="lightbox">
+                        <a href="http://www.heidyhouse.co.kr/" target="_blank"><img src="img/cottage/p3.jpg" alt="하이디하우스""></a>
+                        <h3>하이디하우스<br>T.010-3768-7759</h3>
+                        <p class="closer">닫기</p>
+                    </div>
+                    <li>
+                        <div>5</div>하우스빌레펠트
+                    </li>
+                    <div class="lightbox">
+                        <a href="https://namhaeya.wixsite.com/nhgermany" target="_blank"><img src="img/cottage/100.jpg" alt="하우스빌레펠트""></a>
+                        <h3>하우스빌레펠트<br>T.010-3377-5149</h3>
+                        <p class="closer">닫기</p>
+                    </div>
+                    <li>
+                        <div>6</div>구텐베르그
+                    </li>
+                    <div class="lightbox">
+                        <a href="http://germenvill.cafe24.com/base/kuten/main.php" target="_blank"><img src="img/cottage/p5.jpg" alt="구텐베르그""></a>
+                        <h3>구텐베르그<br>T.010-9060-8885</h3>
+                        <p class="closer">닫기</p>
+                    </div>
+                    <li>
+                        <div>7</div>헤라클레스
+                    </li>
+                    <div class="lightbox">
+                        <a href="https://blog.naver.com/heraclas_namhae/" target="_blank"><img src="img/cottage/p77.jpg" alt="헤라클레스""></a>
+                        <h3>헤라클레스<br>T.010-9667-7768</h3>
+                        <p class="closer">닫기</p>
+                    </div>
+                    <li>
+                        <div>8</div>노이하우스
+                    </li>
+                    <div class="lightbox">
+                        <a href="http://www.germanvillage.co.kr/" target="_blank" ><img src="img/cottage/p7.jpg" alt="노이하우스""></a>
+                        <h3>노이하우스<br>T.010-3343-4537</h3>
+                        <p class="closer">닫기</p>
+                    </div>
+                    <li>
+                        <div>9</div>마인즈하우스
+                    </li>
+                    <div class="lightbox">
+                        <a href="https://mainz.modoo.at/" target="_blank"><img src="img/cottage/p8.jpg" alt="마인즈하우스""></a>
+                        <h3>마인즈하우스<br>T.010-2804-6900</h3>
+                        <p class="closer">닫기</p>
+                    </div>
+                    <li class="inactive">
+                        <div>10</div>하우스마인저
+                    </li>
+                    <li>
+                        <div>11</div>본하우스
+                    </li>
+                    <div class="lightbox">
+                        <a href="http://xn--sn3bu7h1wd13t.com/" target="_blank"><img src="img/cottage/p9.jpg" alt="본하우스""></a>
+                        <h3>본하우스<br>T.010-2382-4428</h3>
+                        <p class="closer">닫기</p>
+                    </div>
+                    <li>
+                        <div>12</div>에센하우스
+                    </li>
+                    <div class="lightbox">
+                        <a href="http://xn--sn3bu7h1wd13t.com/" target="_blank"><img src="img/cottage/p10.jpg" alt="에센하우스""></a>
+                        <h3>에센하우스<br>T.010-2382-4428</h3>
+                        <p class="closer">닫기</p>
+                    </div>
+                    <li class="inactive">
+                        <div>13</div>레마겐하우스
+                    </li>
+                    <li>
+                        <div>14</div>헤네프하우스
+                    </li>
+                    <div class="lightbox">
+                        <a href="http://xn--sn3bu7h1wd13t.com/" target="_blank"><img src="img/cottage/p12.jpg" alt="헤네프하우스""></a>
+                        <h3>헤네프하우스<br>T.010-2382-4428</h3>
+                        <p class="closer">닫기</p>
+                    </div>
+                    <li>
+                        <div>15</div>옥토버하우스
+                    </li>
+                    <div class="lightbox">
+                        <a href="https://oktober.modoo.at/" target="_blank"><img src="img/cottage/p13.jpg" alt="옥토버하우스""></a>
+                        <h3>옥토버하우스<br>T.010-9213-8668</h3>
+                        <p class="closer">닫기</p>
+                    </div>
+                    <li>
+                        <div>16</div>빌라콜로니아
+                    </li>
+                    <div class="lightbox">
+                        <a href="http://www.villacolonia.com/" target="_blank"><img src="img/cottage/p14.jpg" alt="빌라콜로니아""></a>
+                        <h3>빌라콜로니아<br>T.010-8866-9407</h3>
+                        <p class="closer">닫기</p>
+                    </div>
+                    <li class="inactive">
+                        <div>17</div>바바리아하우스
+                    </li>
+                    <li>
+                        <div>18</div>철수네집
+                    </li>
+                    <div class="lightbox">
+                        <a href="http://germenvill.cafe24.com/base/chul/main.php" target="_blank"><img src="img/cottage/p15.jpg" alt="철수네집""></a>
+                        <h3>철수네집<br>T.010-5071-3301</h3>
+                        <p class="closer">닫기</p>
+                    </div>
+                    <li>
+                        <div>19</div>벨라하우스
+                    </li>
+                    <div class="lightbox">
+                        <a href="http://bella.maan.kr/" target="_blank"><img src="img/cottage/p16.jpg" alt="벨라하우스""></a>
+                        <h3>벨라하우스<br>T.010-5055-4020</h3>
+                        <p class="closer">닫기</p>
+                    </div>
+                    <li>
+                        <div>20</div>헨델하우스
+                    </li>
+                    <div class="lightbox">
+                        <a href="http://germenvill.cafe24.com/base/rorel/main.php" target="_blank"><img src="img/cottage/p17.jpg" alt="헨델하우스""></a>
+                        <h3>헨델하우스<br>T.010-3838-8484</h3>
+                        <p class="closer">닫기</p>
+                    </div>
+                    <li class="inactive">
+                        <div>21</div>막스플랑크
+                    </li>
+                    <li>
+                        <div>22</div>호수위의집
+                    </li>
+                    <div class="lightbox">
+                        <a href="http://germenvill.cafe24.com/base/hoosu/main.php" target="_blank"><img src="img/cottage/p18.jpg" alt="호수위의집""></a>
+                        <h3>호수위의집<br>T.010-6558-0065</h3>
+                        <p class="closer">닫기</p>
+                    </div>
+                    <li class="inactive">
+                        <div>23</div>크롬베르크
+                    </li>
+                    <li>
+                        <div>24</div>알프스하우스
+                    </li>
+                    <div class="lightbox">
+                        <a href="http://www.alpshouse.co.kr/" target="_blank"><img src="img/cottage/p19.jpg" alt="알프스하우스""></a>
+                        <h3>알프스하우스<br>T.010-5338-3101</h3>
+                        <p class="closer">닫기</p>
+                    </div>
+                    <li class="inactive">
+                        <div>25</div>하우스메어레스
+                    </li>
+                    <li>
+                        <div>26</div>로젠하우스
+                    </li>
+                    <div class="lightbox">
+                        <a href="http://germenvill.cafe24.com/base/rosen/main2.php" target="_blank"><img src="img/cottage/p20.jpg" alt="로젠하우스""></a>
+                        <h3>로젠하우스<br>T.010-4549-7785</h3>
+                        <p class="closer">닫기</p>
+                    </div>
+                    <li>
+                        <div>27</div>뮌헨하우스
+                    </li>
+                    <div class="lightbox">
+                        <a href="http://www.xn--ed3bu3k1qd13ttua.com/" target="_blank"><img src="img/cottage/p21.jpg" alt="뮌헨하우스""></a>
+                        <h3>뮌헨하우스<br>T.010-7108-8400</h3>
+                        <p class="closer">닫기</p>
+                    </div>
+                    <li class="inactive">
+                        <div>28</div>도이치하우스
+                    </li>
+                    <li class="inactive">
+                        <div>29</div>하우스쾰른
+                    </li>
+                    <li>
+                        <div>30</div>베를린성
+                    </li>
+                    <div class="lightbox">
+                        <a href="https://cafe.naver.com/schlossberlin" target="_blank"><img src="img/cottage/p22.jpg" alt="베를린성""></a>
+                        <h3>베를린성<br>T.010-2485-8081</h3>
+                        <p class="closer">닫기</p>
+                    </div>
+                    <li class="inactive">
+                        <div>31</div>베를린하우스
+                    </li>
+                    <li>
+                        <div>32</div>함부르크
+                    </li>
+                    <div class="lightbox">
+                        <a href="http://hamburgps.net/" target="_blank"><img src="img/cottage/p23.jpg" alt="함부르크""></a>
+                        <h3>함부르크<br>T.010-8980-0091</h3>
+                        <p class="closer">닫기</p>
+                    </div>
+                    <li>
+                        <div>33</div>프랑크푸르트
+                    </li>
+                    <div class="lightbox">
+                        <a href="http://www.frankfurt.kr/" target="_blank"><img src="img/cottage/p24.jpg" alt="프랑크푸르트""></a>
+                        <h3>프랑크푸르트<br>T.010-6617-1170</h3>
+                        <p class="closer">닫기</p>
+                    </div>
+                    <li>
+                        <div>34</div>하노버
+                    </li>
+                    <div class="lightbox">
+                        <a href="http://hannover.dubuplus.com/" target="_blank"><img src="img/cottage/p25.jpg" alt="하노버""></a>
+                        <h3>하노버<br>T.010-3878-9070</h3>
+                        <p class="closer">닫기</p>
+                    </div>
+                    <li>
+                        <div>35</div>요하네스
+                    </li>
+                    <div class="lightbox">
+                        <a href="http://www.germanvill.com/" target="_blank"><img src="img/cottage/p26-1.jpg" alt="요하네스""></a>
+                        <h3>요하네스<br>T.010-6639-1863</h3>
+                        <p class="closer">닫기</p>
+                    </div>
+                    <li>
+                        <div>36</div>겔베하우스
+                    </li>
+                    <div class="lightbox">
+                        <a href="http://cafe.daum.net/gelbe" target="_blank"><img src="img/cottage/p0123.jpg" alt="겔베하우스""></a>
+                        <h3>겔베하우스<br>T.010-6358-3254</h3>
+                        <p class="closer">닫기</p>
+                    </div>
+                    <li>
+                        <div>37</div>괴테하우스
+                    </li>
+                    <div class="lightbox">
+                        <a href="http://www.xn--hd0bn8j6qfi8j85elzafl338doki.com/" target="_blank"><img src="img/cottage/p28.jpg" alt="괴테하우스""></a>
+                        <h3>괴테하우스<br>T.010-9060-8885</h3>
+                        <p class="closer">닫기</p>
+                    </div>
+                    <li>
+                        <div>38</div>베토벤하우스
+                    </li>
+                    <div class="lightbox">
+                        <a href="http://namhaebeethoven.co.kr/" target="_blank"><img src="img/cottage/p29.jpg" alt="베토벤하우스""></a>
+                        <h3>베토벤하우스<br>T.010-3489-8789</h3>
+                        <p class="closer">닫기</p>
+                    </div>
+                    <li>
+                        <div>39</div>하이델베르크
+                    </li>
+                    <div class="lightbox">
+                        <a href="http://www.heidelps.com/" target="_blank"><img src="img/cottage/p1123.jpg" alt="하이델베르크""></a>
+                        <h3>하이델베르크<br>T.010-7544-0469</h3>
+                        <p class="closer">닫기</p>
+                    </div>
+                    <li>
+                        <div>40</div>하우스모젤
+                    </li>
+                    <div class="lightbox">
+                        <a href="https://www.hausmosel.com/" target="_blank"><img src="img/cottage/p400.jpg" alt="하우스모젤""></a>
+                        <h3>하우스모젤<br>T.010-3860-6149</h3>
+                        <p class="closer">닫기</p>
+                    </div>
+                    <li>
+                        <div>41</div>만하임
+                    </li>
+                    <div class="lightbox">
+                        <a href="https://page.yapen.co.kr/27320" target="_blank"><img src="img/cottage/p50.jpg" alt="만하임""></a>
+                        <h3>만하임<br>T.010-7145-8771</h3>
+                        <p class="closer">닫기</p>
+                    </div>
+                    <li>
+                        <div>42</div>몽블랑
+                    </li>
+                    <div class="lightbox">
+                        <a href="https://montblanc.imweb.me/" target="_blank"><img src="img/cottage/m1002.jpg" alt="몽블랑""></a>
+                        <h3>몽블랑<br>T.010-7145-8771</h3>
+                        <p class="closer">닫기</p>
+                    </div>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="around">
+            <div class="center">
+                <div class="title">
+                    <p>주변여행지</p>
+                    <img src="img/dugodwl.png" alt="주변여행지">
+                </div>                
+            </div>            
+            <div class="main">
+                <div class="mainImg"><div class="center"><h2 class="mainText">남해에서 즐기는<br>다양한 체험</h2><h4 class="subText">갯벌체험부터 미술관, 요트체험까지!<br>없는게 뭐죠?</h4></div></div>
+                <div class="center">
+                    <div class="inTxt">
+                        <div class="textCenter">
+                            <h2>국민 PICK! 국내 가장 살고 싶은 곳, 남해!<br>68개의 크고 작은 섬으로 이루어진 남해에서 다양한 체험을 즐겨보세요~</h2>
+                            <h4 class="subText"></h4>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+            <div class="center">
+                <section class="aSection">
+                    <div class="aroundBox">
+                        <a href="http://jeondo.kr/" target="_blank">
+                            <img src="img/travel/sub_03.png" alt="전도갯벌체험장">
+                            <img src="img/more.png" alt="바로가기">
+                            <h3>전도갯벌체험장</h3>
+                            <p>남해군 상동면 동부대로 1662<br>T.010-8630-3732</p>
+                        </a>
+                    </div>
+                    <div class="aroundBox special">
+                        <a href="http://yacht.namhae.go.kr" target="_blank">
+                            <img src="img/travel/sub_05.png" alt="남해요트학교">
+                            <img src="img/more.png" alt="바로가기">
+                            <h3>남해요트학교</h3>
+                            <p>남해군 삼동면 동부대로 1030길 42-26<br>T. 055-867-2977</p>
+                        </a>
+                    </div>
+                    <div class="aroundBox">
+                        <a href="http://www.xn--hz2b11t67asa13hy1qura767c.kr/" target="_blank">
+                            <img src="img/travel/sub_07.png" alt="은점어촌체험마을">
+                            <img src="img/more.png" alt="바로가기">
+                            <h3>은점어촌체험마을</h3>
+                            <p>남해군 삼동면 동부대로 942길 34-9<br>T. 055-867-7119</p>
+                        </a>
+                    </div>
+                    <div class="aroundBox">
+                        <a href="http://www.xn--hq1b37iutl0qb27lcpae38buya.kr/" target="_blank">
+                            <img src="img/travel/sub_12.png" alt="향도어촌체험마을">
+                            <img src="img/more.png" alt="바로가기">
+                            <h3>향도어촌체험마을</h3>
+                            <p>남해군 미조면 동부대로 310길 32-8<br>T. 055-867-4348</p>
+                        </a>
+                    </div>
+                    <div class="aroundBox">
+                        <a href="http://housengarden.net/" target="_blank">
+                            <img src="img/travel/sub_13.png" alt="원예예술촌">
+                            <img src="img/more.png" alt="바로가기">
+                            <h3>원예예술촌</h3>
+                            <p>남해군 삼동면 예술길 39 원예예술촌<br>T. 055-867-4702</p>
+                        </a>
+                    </div>
+                    <div class="aroundBox">
+                        <a href="http://www.xn--q20b11o6nhj7d7d155bjyoa.com/" target="_blank">
+                            <img src="img/travel/sub_14.png" alt="해오름예술촌">
+                            <img src="img/more.png" alt="바로가기">
+                            <h3>해오름예술촌</h3>
+                            <p>남해군 삼동면 동부대로 995<br>T. 055-867-0706</p>
+                        </a>
+                    </div>
+                    <div class="aroundBox">
+                        <a href="http://tour.namhae.go.kr/00002875/00003142/00003147.web" target="_blank">
+                            <img src="img/travel/sub_18.png" alt="바람흔적미술관">
+                            <img src="img/more.png" alt="바로가기">
+                            <h3>바람흔적미술관</h3>
+                            <p>남해군 삼동면 금암로 519-4<br>무인운영</p>
+                        </a>
+                    </div>
+                    <div class="aroundBox">
+                        <a href="http://tour.namhae.go.kr/00002875/00003142/00003143.web" target="_blank">
+                            <img src="img/travel/sub_19.png" alt="나비N테마파크">
+                            <img src="img/more.png" alt="바로가기">
+                            <h3>나비N테마파크</h3>
+                            <p>남해군 삼동면 금암로 562-23<br>T. 055-867-8781</p>
+                        </a>
+                    </div>
+                    <div class="aroundBox">
+                        <a href="http://tour.namhae.go.kr/00002830/00003148/00003195.web" target="_blank">
+                            <img src="img/travel/sub_20.png" alt="편백휴양림">
+                            <img src="img/more.png" alt="바로가기">
+                            <h3>편백휴양림</h3>
+                            <p>남해군 삼동면 금암로 658<br>T. 055-867-7881</p>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <script src="js/masonry.pkgd.min.js"></script>
+        <footer id="footer">
+            <address>남해독일마을<br>
+                <p>경상남도 남해군 삼동면 독일로 92</p></address>
+            <div><a href="https://m.place.naver.com/place/21710629/location?subtab=location" target="_blank">네이버길찾기</a></div>
+            <img src="img/surport.png" alt="서포트">
+        </footer>
+    </div>
+    
+</body>
+</html>
